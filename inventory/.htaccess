@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^inventory\.cultureservicegrowth\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.inventory\.cultureservicegrowth\.com$
+RewriteRule ^/?$ "http\:\/\/inventory\.cultureservicegrowth\.com\/phpmyadmin" [R=301,L]
+

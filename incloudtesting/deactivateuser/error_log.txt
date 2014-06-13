@@ -1,0 +1,9 @@
+[22-Aug-2013 22:13:29 UTC] PHP Notice:  Undefined property: stdClass::$Agent_GetActiveListResult in D:\websites\cultureservicegrowth.com\inCloudTesting\deactivateuser\deactivate_call.php on line 12
+[22-Aug-2013 22:13:29 UTC] PHP Notice:  Trying to get property of non-object in D:\websites\cultureservicegrowth.com\inCloudTesting\deactivateuser\deactivate_call.php on line 12
+[22-Aug-2013 22:13:29 UTC] PHP Warning:  Invalid argument supplied for foreach() in D:\websites\cultureservicegrowth.com\inCloudTesting\deactivateuser\deactivate_call.php on line 14
+[22-Aug-2013 22:16:57 UTC] PHP Notice:  Undefined index: firstname in D:\websites\cultureservicegrowth.com\inCloudTesting\deactivateuser\deactivate_call.php on line 5
+[22-Aug-2013 22:16:57 UTC] PHP Notice:  Undefined index: lastname in D:\websites\cultureservicegrowth.com\inCloudTesting\deactivateuser\deactivate_call.php on line 6
+[22-Aug-2013 22:17:06 UTC] PHP Notice:  Undefined property: stdClass::$ReportToFirstName in D:\websites\cultureservicegrowth.com\inCloudTesting\deactivateuser\deactivate_call.php on line 20
+[22-Aug-2013 22:17:06 UTC] PHP Notice:  Undefined property: stdClass::$ReportToLastName in D:\websites\cultureservicegrowth.com\inCloudTesting\deactivateuser\deactivate_call.php on line 20
+[22-Aug-2013 22:19:06 UTC] PHP Notice:  Undefined property: stdClass::$ReportToName in D:\websites\cultureservicegrowth.com\inCloudTesting\deactivateuser\deactivate_call.php on line 20
+[22-Aug-2013 22:19:58 UTC] PHP Notice:  Undefined property: stdClass::$ReportsToName in D:\websites\cultureservicegrowth.com\inCloudTesting\deactivateuser\deactivate_call.php on line 20

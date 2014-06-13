@@ -1,0 +1,20 @@
+[08-May-2014 16:19:17 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-blog-header.php(12): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:19:40 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-blog-header.php(12): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338

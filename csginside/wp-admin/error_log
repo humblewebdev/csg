@@ -1,0 +1,286 @@
+[08-May-2014 03:38:53 UTC] PHP Fatal error:  Class 'TGM_Bulk_Installer' not found in /home/csgrocks/public_html/csginside/wp-content/themes/responsive/core/includes/classes/class-tgm-plugin-activation.php on line 1559
+[08-May-2014 16:13:26 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:13:39 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:13:43 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:13:47 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:13:48 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:13:50 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:13:55 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:13:59 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:14:01 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:14:48 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:15:03 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:15:33 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:15:48 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:17:48 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:19:07 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:19:22 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:19:25 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:19:28 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:19:29 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:19:30 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:19:37 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:19:52 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:20:07 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:20:22 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:20:24 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:20:30 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin.php(30): require_once('/home/csgrocks/...')
+#7 /home/csgrocks/ in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[08-May-2014 16:20:50 UTC] PHP Fatal error:  Uncaught exception 'adLDAPException' with message 'No LDAP support for PHP.  See: http://www.php.net/ldap' in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php:338
+Stack trace:
+#0 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(31): adLDAP->__construct(Array)
+#1 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(49): SimpleLDAPLogin->__construct()
+#2 /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/Simple-LDAP-Login.php(389): SimpleLDAPLogin::getInstance()
+#3 /home/csgrocks/public_html/csginside/wp-settings.php(214): include_once('/home/csgrocks/...')
+#4 /home/csgrocks/public_html/csginside/wp-config.php(102): require_once('/home/csgrocks/...')
+#5 /home/csgrocks/public_html/csginside/wp-load.php(29): require_once('/home/csgrocks/...')
+#6 /home/csgrocks/public_html/csginside/wp-admin/admin-ajax.php(20): require_once('/home/csgrocks/...')
+#7 {main}
+  t in /home/csgrocks/public_html/csginside/wp-content/plugins/simple-ldap-login/includes/adLDAP.php on line 338
+[12-May-2014 14:49:19 UTC] WordPress database error Subquery returns more than 1 row for query DELETE FROM wp_mtouchquiz_answer WHERE question_id=(SELECT ID FROM wp_mtouchquiz_question WHERE quiz_id='2') made by include('/plugins/mtouch-quiz/quiz.php')

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upload Form</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/mystyle.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div id="container">
+		<div id="content">
+			<div class="row">
+				<div class="span4" style="text-align:center;">
+					<h3>Lets Upload!</h3>
+				</div>
+			</div>
+			<div class="row">
+				<form id="dbform" enctype="multipart/form-data" action="submit2database.php" method="post">
+					<div class="input-group">
+						<span class="input-group-btn">
+							<input id="filebox" type="text" class="form-control" readonly>
+							<!--<span class="btn btn-default btn-file">Browse<input type="file" name="filename" id="fileid"></span>-->
+							<button type="button" class="btn btn-default">
+							<span class="glyphicon glyphicon-list btn-file" ><input type="file" name="filename" id="fileid"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-file">
+							<span class="glyphicon glyphicon-upload" onclick="submitme()" value="Submit form" type="upload"></span>
+							</button>
+							<!--<span class="btn btn-default btn-file" onclick="submitme()" value="Submit form">Upload</span>-->
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document)
+			.on('change', '.btn-file :file', function() {
+				var input = $(this),
+					numFiles = input.get(0).files ? input.get(0).files.length : 1,
+					label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+				input.trigger('fileselect', [numFiles, label]);
+		});
+		
+		$(document).ready( function() {
+			$('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+				console.log(numFiles);
+				console.log(label);
+				$("#file").show();
+				$("#filebox").text(label);
+			});
+		});
+		
+		
+		function submitme()
+		{
+			document.getElementById("dbform").submit();
+		}
+	</script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

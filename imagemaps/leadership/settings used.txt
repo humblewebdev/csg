@@ -1,0 +1,5 @@
+Resolution: 892x1882
+
+Title: Bauhaus 93 6pt   color: #c76700
+
+body: verdana 4pt text  color: #004a80

@@ -1,0 +1,28 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+# ALLOW USER BY IP
+<Limit GET POST>
+ order deny,allow
+ deny from all
+ allow from 71.41.137.17
+ allow from 71.41.137.18
+ allow from 71.41.137.19
+ allow from 71.41.137.20
+ allow from 173.227.72.62
+ allow from 173.227.72.63
+ allow from 173.227.72.64
+ allow from 173.227.72.65
+ allow from 173.227.72.66
+ allow from 173.227.72.67
+ allow from 173.227.72.68
+</Limit>

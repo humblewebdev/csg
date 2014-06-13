@@ -1,0 +1,1 @@
+contact_id,master_contact_id,contact_code,media_name,contact_name,ANI_DIALNUM,skill_no,skill_name,campaign_no,campaign_name,agent_no,agent_name,team_no,team_name,SLA,start_date,start_time,prequeue,inqueue,agent_time,post_queue,ACW_Time,Total_Time,Abandon_Time,Routing_Time,abandon,callback_time,Logged,Hold_Time,disp_code,disp_name,disp_comments
