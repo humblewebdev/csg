@@ -83,12 +83,21 @@ exit;
 $mysqli->close(); //Close mysql connection that was started in the include file
 /********** End of Seperate Script ******************/
 
-$url2 = "http://www.farmersagent.com$pull_pic/Contact-Me.htm";
+$url2 = "http://www.farmersagent.com$pull_pic";
 
 $sites_html = file_get_contents($url2);
 
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch,CURLOPT_URL, $url2);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0');
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,10);
+curl_setopt($ch,CURLOPT_TIMEOUT,10);
+$content = curl_exec($ch);
+
 $html = new DOMDocument();
-@$html->loadHTML($sites_html);
+@$html->loadHTML($content);
 $meta_og_img = null;
 $meta_og_title = null;
 //Get all meta tags and loop through them.
@@ -112,13 +121,14 @@ foreach($html->getElementsByTagName('meta') as $meta) {
 	}
 }
 
-$titlenames = explode(" ", $meta_og_title);
-$firstname = $titlenames[1];
-$lastname = substr($titlenames[2], 0, -1); //Last name with last character (comma) removed
-$statecity = $titlenames[3] . " " . $titlenames[4] . " " . $titlenames[5]; //State and City Name Together
-$scsplit = explode(", ", $statecity);
-$state = $scsplit[1];
-$city = $scsplit[0];
+$titlenames = explode(",", $meta_og_title);
+$name = explode(" ", trim($titlenames[0]));
+$firstname = $name[0];
+$lastname = $name[1]; //Last name with last character (comma) removed
+$statecity = $titlenames[1] . ', ' . $titlenames[2]; //State and City Name Together
+//$scsplit = explode(", ", $statecity);
+$state = $titlenames[2];
+$city = $titlenames[1];
 
 if($meta_og_img == NULL){/*echo "No profile pic found"; */}
 else{
@@ -128,17 +138,30 @@ echo '<a href="' . $meta_og_url . '" target="_blank" title="' . $meta_og_desc . 
 }
 
 //Loop to parse page for the agents information in span fields with matching id names
+
+		$adsplit = '';
+		$zip = '';
+		$county = '';
+		$phone = '';
+	foreach($html->getElementsByTagName('div') as $div) {
+		if($div->getAttribute('class') == "street-address"){
+		//$adsplit = preg_split("/$city/", $div->nodeValue); //Split up the address from the actual and on with included city and state
+			$adsplit = $div->nodeValue;
+		}
+	}
 	foreach($html->getElementsByTagName('span') as $span) {
-		if($span->getAttribute('id') == "ctl00_ContentPlaceHolder1_ContactProfileInfo_lblAgentAddress"){
-		$adsplit = preg_split("/$city/", $span->nodeValue); //Split up the address from the actual and on with included city and state
-		
-		$address = $adsplit[0];
-		$zip = substr($adsplit[1], -5); //Grab last 5 characters of address split string which is the zip
+		if($span->getAttribute('class') == "postal-code"){
+		//$adsplit = preg_split("/$city/", $div->nodeValue); //Split up the address from the actual and on with included city and state
+			$zip = $span->nodeValue;
+		}
+
+		$address = $adsplit;
+		//$zip = substr($adsplit[1], -5); //Grab last 5 characters of address split string which is the zip
 		$email = substr($pull_pic, 1,100) . '@farmersagent.com';
 
-		}
-		if($span->getAttribute('id') == "ctl00_ContentPlaceHolder1_ContactProfileInfo_lblAgentPhone"){
-		$phone =  preg_replace("/[^0-9]/","",$span->nodeValue); //Phone number with only numbers inside
+
+		if($span->getAttribute('class') == "value"){
+			$phone =  $span->nodeValue; //Phone number with only numbers inside
 		}
 		
 	}
@@ -156,9 +179,7 @@ echo '<a href="' . $meta_og_url . '" target="_blank" title="' . $meta_og_desc . 
 	$countysplit2 = explode(", ", $countysplit[1]);
 	$countysplit1 = explode(' County', $countysplit[1]);
 
-	echo $countysplit2[0];
-
-	$county = $countysplit1[0];
+	$county = $countysplit2[0];
 	}
 }
 ?>
@@ -168,16 +189,16 @@ $(document).ready(function() {
 
      //Update all the fields via jquery and javascript
 	 
-	 var firstname = '<?php echo trim($firstname); ?>';
-	 var lastname = '<?php echo trim($lastname); ?>';
-	 var address = '<?php echo trim($address); ?>';
-	 var city = '<?php echo trim($city); ?>';
-	 var state = '<?php echo trim($state); ?>';
-	 var zip = '<?php echo trim($zip); ?>';
-	 var email = '<?php echo trim($email); ?>';
-	 var website = '<?php echo trim($meta_og_url); ?>';
-	 var county = '<?php echo trim($county); ?>';
-	 var phone = '<?php echo "(".substr($phone, 0, 3).") ".substr($phone, 3, 3)."-".substr($phone,6); ?>';
+	 var firstname = '<?php echo (isset($firstname)) ? trim($firstname) : ''; ?>';
+	 var lastname = '<?php echo (isset($lastname)) ? trim($lastname) : '' ; ?>';
+	 var address = '<?php echo (isset($address)) ? trim($address) : '' ; ?>';
+	 var city = '<?php echo (isset($city)) ? trim($city) : ''; ?>';
+	 var state = '<?php echo isset($state) ? trim($state) : ''; ?>';
+	 var zip = '<?php echo isset($zip) ? trim($zip) : ''; ?>';
+	 var email = '<?php echo (isset($email)) ? trim($email) : ''; ?>';
+	 var website = '<?php echo isset($url2) ? trim($url2) : ''; ?>';
+	 var county = '<?php echo (isset($county)) ? trim($county) : '' ; ?>';
+	 var phone = '<?php echo (isset($phone)) ? trim($phone) : ''; ?>';
 	 
 	 document.getElementById("name").value = firstname;
 	 document.getElementById("lastname").value = lastname;

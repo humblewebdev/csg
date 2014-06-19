@@ -8,7 +8,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <META http-equiv="Content-type" content="text/html; charset=iso-8859-1">
     <title>CSG FAST - Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -40,27 +40,27 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
               <li class="active"><a href="#">Registration Wizard</a></li>
 			</ul>
         </div>
-        
+
 		<!-- Popup for dynamic product information agreement (Initially hidden) -->
 		<div id="preModal" class="modal hide fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-header">
 						<!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button> -->
 						<h4>Terms and Conditions</h4>
 					</div>
-					<div class="modal-body">		
+					<div class="modal-body">
 					<body><small><b>Introduction: </b>These terms and conditions govern your use of this website; by using this website, you accept these terms and conditions in full.   If you disagree with these terms and conditions or any part of these terms and conditions, you must not use this website.<br><b>License to use website: </b>Unless otherwise stated, CSG and/or its licensors own the intellectual property rights in the website and material on the website.  Subject to the license below, all these intellectual property rights are reserved.<br><b>You must not: </b>republish material from this website (including republication on another website);or redistribute material from this website except for content specifically and expressly made available for redistribution. Where content is specifically made available for redistribution, it may only be redistributed within your organization. <br><b>Acceptable use: </b>You must not use this website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website; or in any way which is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity.<br><b>Limitations of liability: </b>CSG will not be liable to you (whether under the law of contact, the law of torts or otherwise) in relation to the contents of, or use of, or otherwise in connection with, this website: l)to the extent that the website is provided free-of-charge, for any direct loss; 2)for any indirect, special or consequential loss; or 3)for any business losses, loss of revenue, income, profits or anticipated savings, loss of contracts or business relationships, loss of reputation or goodwill, or loss or corruption of information or data. <b>These limitations of liability apply even if CSG has been expressly advised of the potential loss. </b> <br><b>Credits/Refunds: </b>All credit and refunds will be handled via the Agency marketing portal and the terms outlined at http://agentmarketingsupport.com/<br><b>Appointment and Alert Guarantees:  </b>Once an appointment has been set in the eCMS system, it is considered complete by CSG.  If the appointment is cancelled and the agent notifies CSG in advance, CSG will provide a replacement appointment.  In the unlikely event that CSG does not set the subscribed number of alerts or FFRs by the end of a month, the agent will be credited in the month following with the alerts or FFRs.<br><b>Early Program Activation: </b>CSG may allow agents to begin services earlier than the folio start date and will add the activity to the end of month results for the first full month of paid service. If early program activation is allowed for an agent, they are subject to a two month minimum subscription. </small></body>
 					</div>
-					<div class="modal-footer">		
+					<div class="modal-footer">
 						<a href="#" data-dismiss="modal" aria-hidden="true" class="btn green AcceptWizTerms">Accept Terms</a>
 						<a href="login.php" class="btn red">I Do Not Agree</a>
 					</div>
 		</div>
 		<!-- End of Hidden Popup Div -->
-		
+
         <div class="inner_content">
             <div class="statistic clearfix">
                 <div class="current_page float_left">
-                    
+
 					<img src="img/reg_header.png" />
                 </div>
 				<div class="current_page float_right">
@@ -103,7 +103,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                       <div class="bar"></div>
                                                     </div>
                                                 </div>
-												
+
                                                 <div class="tab-content">
 													<!--------------------------------------------------------------------------------------------
 													-
@@ -114,14 +114,14 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 													---------------------------------------------------------------------------------------------->
 												    <div class="tab-pane no_padding" id="tab10">
 														<div class="form_row">
-															
+
 															   <center><h3>Select the services you want</h3></center>
-															
+
 														</div>
 														<div class="form_row">
                                                                 <div class="status-widgets">
                                                         <?php while($productinfo = $searchinfo->fetch_assoc()) { ?>
-                                                                    
+
 																	<!-- Popup for dynamic product information agreement (Initially hidden) -->
 																	<div id="prod_mod_<?php echo $productinfo['product_id']; ?>" class="modal hide fade" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 																				<div class="modal-header">
@@ -132,14 +132,14 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																					<p><?php echo $productinfo['product_terms']; ?></p>
 																				</div>
 																				<div class="modal-footer">
-											
+
 																					<a href="#" data-dismiss="modal" aria-hidden="true" prodname="<?php echo $productinfo['product_name']; ?>" prodid="prod_mod_<?php echo $productinfo['product_id']; ?>" class="btn green addprod">Accept Terms / Add Product</a>
 																					<a href="#" data-dismiss="modal" aria-hidden="true" prodname="<?php echo $productinfo['product_name']; ?>" prodid="prod_mod_<?php echo $productinfo['product_id']; ?>" class="btn red removeprod">Cancel (Unselect)</a>
 																				</div>
 																	</div>
 																	<!-- End of Hidden Popup Div -->
-																	
-																	
+
+
 																	<div class="row-fluid">
 																		<div class="span12">
 																			<div class="widget blue clearfix prod_mod_<?php echo $productinfo['product_id']; ?>" href="#prod_mod_<?php echo $productinfo['product_id']; ?>" role="button" data-toggle="modal" style="cursor: pointer;">
@@ -159,12 +159,12 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																		</div>
 																	</div>
 																	<br>
-																	
+
 													    <?php }?> <!-- End of Product Fetch Loop -->
-																	
-																	<div class="row-fluid">	
+
+																	<div class="row-fluid">
 																		<div class="span12" id="done_select">
-																			
+
 																			<div class="widget grey clearfix next-button" href="#preModal" role="button" data-toggle="modal" style="cursor: pointer;">
 																				<div class="options">
 
@@ -180,13 +180,13 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																				<a href="#"class="more"><i class="icon-arrow-right"></i></a>
 																			</div>
 																			<input class="fast_products" id="fast_products" name="fast_products--tosql_farm_agent_info" style="display: none;"/>
-																		   
+
 																		</div>
 																	</div>
 																</div>
-															
+
 														</div>
-                                                        
+
                                                     </div>
 													<!--------------------------------------------------------------------------------------------
 													-
@@ -204,7 +204,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																<label for="website" id="websitefound"></label>
 																<!--<label for="website" id="websitenotfound"></label>-->
 															</div>
-															
+
                                                         </div>
                                                         <div class="form_row">
                                                             <label class="field_name align_right">First Name <span class="required">*</span></label>
@@ -212,7 +212,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                                 <input class="span6 required" id="name" name="firstname--tosql_users" type="text" AUTOCOMPLETE=ON>
                                                             </div>
                                                         </div>
-														
+
                                                         <div class="form_row">
                                                             <label class="field_name align_right">Last Name <span class="required">*</span></label>
                                                             <div class="field">
@@ -227,6 +227,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                                 <label for="agentcode" id="dup_agentcode"></label>
 															</div>
                                                         </div>
+
                                                         <div class="form_row">
                                                             <label class="field_name align_right">Password <span class="required">*</span></label>
                                                             <div class="field">
@@ -246,7 +247,14 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                                 <label for="email" id="dup_email"></label>
 															</div>
                                                         </div>
-                                                        
+                                                        <div class="form_row">
+                                                            <label class="field_name align_right">Referal Agent Name</label>
+                                                            <div class="field">
+                                                                <input class="span6" id="referal_first" name="referal_agent_Name--tosql_users" type="text" >
+                                                                <label for="agentcode" id="dup_agentcode"></label>
+															</div>
+                                                        </div>
+
                                                     </div>
 													<!--------------------------------------------------------------------------------------------
 													-
@@ -262,7 +270,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                                 <input class="span6 required" id="agencyname" name="agencyname--tosql_farm_agent_info" type="text" AUTOCOMPLETE=ON>
                                                             </div>
                                                         </div>
-														<div class="form_row"> 
+														<div class="form_row">
                                                             <label class="field_name align_right">Office Address <span class="required">*</span></label>
                                                             <div class="field">
                                                                 <input class="span6 required" id="address" name="address--tosql_farm_agent_info" type="text" AUTOCOMPLETE=ON>
@@ -333,14 +341,14 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                        </div>  
+                                                        </div>
 														<div class="form_row">
                                                             <label class="field_name align_right">Your County Name <span class="required">*</span></label>
                                                             <div class="field">
                                                                 <input class="span6 required" id="county" name="county--tosql_farm_agent_info" type="text" AUTOCOMPLETE=ON>
                                                             </div>
                                                         </div>
-												
+
 														<div class="form_row">
                                                             <label class="field_name align_right">Zip Code <span class="required">*</span></label>
                                                             <div class="field">
@@ -348,7 +356,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                             </div>
                                                         </div>
 														<!-- Adding Timezone field to the registration process -->
-																									
+
 															<div class="form_row">
                                                             <label class="field_name align_right">Time Zone<span class="required">*</span></label>
 																<div class="field">
@@ -363,26 +371,26 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                                     </select>
 																	</div>
 																</div>
-															</div> 
-														
-														<div class="form_row"> 
+															</div>
+
+														<div class="form_row">
                                                             <label class="field_name align_right">District Manager<span class="required">*</span></label>
                                                             <div class="field">
 																 <select class="required chosen-select" name="dm_id--tosql_farm_agent_info">
 																	<option value="" selected="">Select your Distrist Manager...</option>
 																	<?php
 																	$dm_req = "SELECT * from dm_list;";
-																	$dm_query = $mysqli->query($dm_req)or die($mysqli->error); 
+																	$dm_query = $mysqli->query($dm_req)or die($mysqli->error);
 
 																		while($dm_row = $dm_query->fetch_assoc())
 																		{
 																		  echo "<option value='{$dm_row['id_dm']}' >{$dm_row['firstname']} {$dm_row['lastname']} | {$dm_row['state_office']}</option>";
 																		} $mysqli->close();
 																	?>
-																 </select>  
+																 </select>
 															</div>
 														</div>
-														
+
 														<div class="form_row">
                                                             <label class="field_name align_right">Main Business Phone <span class="required">*</span></label>
                                                             <div class="field">
@@ -391,7 +399,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																<!-- The above input field gets the value of the mainphone input field dynamically -->
 															</div>
                                                         </div>
-														
+
 														<div class="form_row">
                                                             <label class="field_name align_right">Fax Number</label>
                                                             <div class="field">
@@ -410,7 +418,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                                 <input class="span1 mask-digits2" id="years_in_bus" name="years_in_bus--tosql_farm_agent_info" type="text" AUTOCOMPLETE=ON>
                                                             </div>
                                                         </div>
-								
+
                                                         <div class="form_row">
                                                             <label class="field_name align_right">Is your agency spanish speaking?</label>
 														    <div class="field">
@@ -421,12 +429,12 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	<div class="radio"><input type="radio" class="uniform" name="spanish--tosql_farm_agent_info" checked value="No"></div> No
 																</label>
 																<a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="Do you have a large number of Spanish speaking customers?" title="Help" class="btn orange">?</a></span>
-												
+
 														    </div>
 														</div>
-                                                        
+
 														<div class="form_row">
-                                                            <label class="field_name align_right">Using ECMS?</label>														
+                                                            <label class="field_name align_right">Using ECMS?</label>
 															<div class="field">
 																<label class="radio">
 																	<div class="radio"><input type="radio" class="uniform" name="ecmscalender--tosql_farm_agent_info" checked value="Yes"></div> Yes
@@ -435,10 +443,10 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	<div class="radio"><input type="radio" class="uniform" name="ecmscalender--tosql_farm_agent_info" value="No"></div> No
 																</label>
 																<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="Do you use Farmers Emails and eCMS calenders for all of your transactions, appts, etc.?" title="Help" class="btn orange">?</a></span>
-												
+
 														    </div>
                                                         </div>
-                                                        
+
                                                     </div>
 													<!--------------------------------------------------------------------------------------------
 													-
@@ -458,7 +466,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	<div class="radio"><input type="radio" class="uniform showstaff" name="radio2" checked value="No"></div> No
 																</label>
 																<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="Do you have additional staff employed at your agency?" title="Help" class="btn orange">?</a></span>
-												
+
 														    </div>
 														</div>
                                                         <?php for($s = 1; $s<=6; $s++){ //Loop through for additional staff?>
@@ -483,7 +491,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																			<div class="field">
 																		    <input class="span10 email" name="staffemail<?php echo $s;?>--tosql_farm_agent_staff_info" type="text" AUTOCOMPLETE=ON placeholder="janedoe@website.com">
 																			</div>
-																		</div>		
+																		</div>
 																		<div class="form_row">
 																			<label class="field_name">Phone Number</label>
 																			<div class="field">
@@ -495,7 +503,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																			<div class="field">
 																				<div class="input-append bootstrap-timepicker">
 																					<input readonly class="span5 input-small timepicker3" name="staff<?php echo $s;?>open--tosql_farm_agent_staff_info" type="text" value="08:00 AM"/>
-																					<span class="add-on" style="width: 50px;"><i class="icon-time"></i> In</span> 
+																					<span class="add-on" style="width: 50px;"><i class="icon-time"></i> In</span>
 																			    </div>
 																				<div class="input-append bootstrap-timepicker">
 																					<input readonly class="span5 input-small timepicker3" name="staff<?php echo $s;?>close--tosql_farm_agent_staff_info" type="text" value="05:00 PM"/>
@@ -517,8 +525,8 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 															</div>
 														</div>
 														<?php } ?>
-														
-														
+
+
 													</div>
 														<!--------------------------------------------------------------------------------------------
 													-
@@ -528,11 +536,11 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 													-
 													---------------------------------------------------------------------------------------------->
                                                     <div class="tab-pane no_padding" id="tab14">
-													
+
 														<div class="form_row">
 															<label class="field_name align_right">Business Hours of Operation <span class="required">*</span></label><br>
 															<table>
-															
+
 															<!-------------------------------------------------------- Monday ---------------------------------->
 															<tr>
 															<td style="padding-right: 70px;">
@@ -541,33 +549,33 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																		<span style="width: 80px;" class="add-on">M-Open</span>
 																		<input readonly class="span11 input-small timepicker3" name="mopen--tosql_farm_agent_info" type="text" value="08:00 AM"/>
 																		<span class="add-on"><i class="icon-time"></i></span>
-																		
+
 																	</div>
 																</div>
 															</td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="input-append bootstrap-timepicker">
-																	   
+
 																		<input readonly class="span11 input-small timepicker3" name="mclose--tosql_farm_agent_info" type="text" value="05:00 PM"/>
 																		<span class="add-on"><i class="icon-time"></i> Close</span>
 																	</div>
 																</div>
 															</td>
-															
+
 															<td></td>
 															<!--<td style="padding-right: 80px;"></td> -->
 															<td>
 																<div class="field">
 																	<div class="switch" data-animated="false" data-on="success" data-on-label="Open" data-off="danger" data-off-label="Closed">
 																		<input name="m_status--tosql_farm_agent_info"  type="hidden" value="0">
-																		<input class="span11" type="checkbox" name="m_status--tosql_farm_agent_info" value="1" checked>	
+																		<input class="span11" type="checkbox" name="m_status--tosql_farm_agent_info" value="1" checked>
 																	</div>
 																</div>
 															</td>
 															</tr>
-															
+
 															<!-------------------------------------------Tuesday ---------------------------------->
 															<tr>
 															<td style="padding-right: 70px;">
@@ -579,7 +587,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="input-append bootstrap-timepicker">
@@ -588,21 +596,21 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td style="padding-right: 50px;"></td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="switch" data-animated="false" data-on="success" data-on-label="Open" data-off="danger" data-off-label="Closed">
 																		<input name="t_status--tosql_farm_agent_info"  type="hidden" value="0">
-																		<input type="checkbox" name="t_status--tosql_farm_agent_info" value="1" checked>	
+																		<input type="checkbox" name="t_status--tosql_farm_agent_info" value="1" checked>
 																	</div>
 																</div>
 															</td>
 															</tr>
-															
+
 															<!------------------------------------------- Wednesday ---------------------------------->
-															
+
 															<tr>
 															<td style="padding-right: 70px;">
 																<div class="field">
@@ -613,7 +621,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="input-append bootstrap-timepicker">
@@ -622,19 +630,19 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td style="padding-right: 50px;"></td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="switch" data-animated="false" data-on="success" data-on-label="Open" data-off="danger" data-off-label="Closed">
 																		<input name="w_status--tosql_farm_agent_info"  type="hidden" value="0">
-																		<input type="checkbox" name="w_status--tosql_farm_agent_info" value="1" checked>	
+																		<input type="checkbox" name="w_status--tosql_farm_agent_info" value="1" checked>
 																	</div>
 																</div>
 															</td>
 															</tr>
-															
+
 															<!------------------------------------------- Thursday ---------------------------------->
 															<tr>
 															<td style="padding-right: 70px;">
@@ -646,7 +654,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="input-append bootstrap-timepicker">
@@ -655,19 +663,19 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td style="padding-right: 50px;"></td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="switch" data-animated="false" data-on="success" data-on-label="Open" data-off="danger" data-off-label="Closed">
 																		<input name="r_status--tosql_farm_agent_info"  type="hidden" value="0">
-																		<input type="checkbox" name="r_status--tosql_farm_agent_info" value="1" checked>	
+																		<input type="checkbox" name="r_status--tosql_farm_agent_info" value="1" checked>
 																	</div>
 																</div>
 															</td>
 															</tr>
-															
+
 															<!------------------------------------------- Friday ---------------------------------->
 															<tr>
 															<td style="padding-right: 70px;">
@@ -679,7 +687,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="input-append bootstrap-timepicker">
@@ -688,19 +696,19 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td style="padding-right: 10px;"></td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="switch" data-animated="false" data-on="success" data-on-label="Open" data-off="danger" data-off-label="Closed">
 																		<input name="f_status--tosql_farm_agent_info"  type="hidden" value="0">
-																		<input type="checkbox" name="f_status--tosql_farm_agent_info" value="1" checked>	
+																		<input type="checkbox" name="f_status--tosql_farm_agent_info" value="1" checked>
 																	</div>
 																</div>
 															</td>
 															</tr>
-															
+
 															<!------------------------------------------- Saturday ---------------------------------->
 															<tr>
 															<td style="padding-right: 70px;">
@@ -712,7 +720,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="input-append bootstrap-timepicker">
@@ -721,19 +729,19 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td style="padding-right: 10px;"></td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="switch" data-animated="false" data-on="success" data-on-label="Open" data-off="danger" data-off-label="Closed">
 																		<input name="sa_status--tosql_farm_agent_info"  type="hidden" value="0">
-																		<input type="checkbox" name="sa_status--tosql_farm_agent_info" value="1" checked>	
+																		<input type="checkbox" name="sa_status--tosql_farm_agent_info" value="1" checked>
 																	</div>
 																</div>
 															</td>
 															</tr>
-															
+
 															<!------------------------------------------- Sunday ---------------------------------->
 															<tr>
 															<td style="padding-right: 70px;">
@@ -745,7 +753,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="input-append bootstrap-timepicker">
@@ -754,19 +762,19 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td style="padding-right: 10px;"></td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="switch" data-animated="false" data-on="success" data-on-label="Open" data-off="danger" data-off-label="Closed">
 																		<input name="su_status--tosql_farm_agent_info"  type="hidden" value="0">
-																		<input type="checkbox" name="su_status--tosql_farm_agent_info" value="1" checked>	
+																		<input type="checkbox" name="su_status--tosql_farm_agent_info" value="1" checked>
 																	</div>
 																</div>
 															</td>
 															</tr>
-															
+
 															<!------------------------------------------- Lunch ---------------------------------->
 															<tr>
 															<td style="padding-right: 70px;">
@@ -778,7 +786,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td>
 																<div class="field">
 																	<div class="input-append bootstrap-timepicker">
@@ -787,14 +795,14 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</div>
 																</div>
 															</td>
-															
+
 															<td></td>
 															</tr>
-															
+
 															</table>
 														</div>
                                                     </div>
-													
+
 													<!--------------------------------------------------------------------------------------------
 													-
 													-
@@ -802,14 +810,14 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 													-
 													-
 													---------------------------------------------------------------------------------------------->
-													<div class="tab-pane no_padding" id="tab15"> 
+													<div class="tab-pane no_padding" id="tab15">
 													   <div class="form_row no_add_fields show">
 															<div class="field">
 																<div class="field_value"><h4>No Additional Fields Needed. You're almost finished!</h4></div>
 															</div>
 													   </div>
-													   
-													   
+
+
 														<!---------------------------------------- Inbound Only Questions -------------------------------------------------------->
 														<div class="form_row added_fields prod_id_1 hide">
 															<label class="field_name align_right">Secondary Phone</label>
@@ -824,7 +832,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 															</div>
 														</div>
 														<div class="form_row added_fields prod_id_1 hide">
-															<label class="field_name align_right">Inbound Option?</label>														
+															<label class="field_name align_right">Inbound Option?</label>
 															<div class="field">
 																<label class="radio">
 																	<div class="radio"><input type="radio" class="uniform" name="inbound_option--tosql_products_ext" checked value="agent"></div> Agent First
@@ -848,18 +856,18 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="Do you currently have call forwarding capabilities?" title="Help" class="btn orange">?</a></span>
 															</div>
 														</div>
-														
+
 														<div class="form_row added_fields prod_id_1 hide">
 															<label class="field_name align_right">Additional Email Recipients for Voicemails</label>
 															<div class="field">
 																<textarea class="autosize" name="vmemails--tosql_farm_incontact_info" cols="63" rows="3" style="resize: vertical; height: 88px;"></textarea>
 															</div>
 														</div>
-										
+
 														<!------------------------------------ End of Inbound Only Questions ---------------------------------------------------->
 
-														
-														
+
+
 														<!------------------------------------ Start of FFR Only Questions ---------------------------------------------------->
 													   	<div class="form_row added_fields prod_id_2 hide">
 															<label class="field_name align_right">Appt. Preference</label>
@@ -885,7 +893,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	<input class="span4 mask-max" type="text" name="max_day_appts--tosql_products_ext"/>
 																	<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="Please provide the max appointments you want in a day" title="Help" class="btn orange">?</a></span>
 																</div>
-																
+
 															</div>
 														</div>
 														<div class="form_row added_fields prod_id_2 hide">
@@ -895,7 +903,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	<input class="span4 mask-max" type="text" name="max_week_appts--tosql_products_ext"/>
 																	<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="Please provide the max appointments you want in a week" title="Help" class="btn orange">?</a></span>
 																</div>
-																
+
 															</div>
 														</div>
 														<div class="form_row added_fields prod_id_2 hide">
@@ -912,7 +920,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</select>
 																	<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="How long would you like in-between appts?" title="Help" class="btn orange">?</a></span>
 																</div>
-																
+
 															</div>
 														</div>
 														<div class="form_row added_fields prod_id_2 hide">
@@ -926,7 +934,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																		<option value="3 weeks out">3 weeks out</option>
 																	</select>
 																	<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="How many weeks out do you want your appts scheduled?" title="Help" class="btn orange">?</a></span>
-																</div>	
+																</div>
 															</div>
 														</div>
 														<div class="form_row added_fields prod_id_2 hide">
@@ -935,24 +943,24 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																<div class="span8">
 																	 <textarea class="autosize" name="other_services_provided--tosql_products_ext" cols="63" rows="3" style="resize: vertical; height: 88px;"></textarea>
 																	 <span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="What other services does your office provide?" title="Help" class="btn orange">?</a></span>
-																</div>	
+																</div>
 															</div>
 														</div>
 													   	<!------------------------------------ End of FFR Only Questions ---------------------------------------------------->
-													  
+
 
 													  <div class="form_row added_fields prod_id_2 prod_id_3 hide">
 															<label class="field_name align_right">Set my appts with</label>
 															<div class="field">
 																<div class="span8">
 																	<select id="ffr_where_to_set_appts" name="where_to_set_appts--tosql_products_ext" type="text">
-																		<option value="Agent" selected>Myself</option>	
+																		<option value="Agent" selected>Myself</option>
 																	</select>
 																<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="With whom should we set your appts with?" title="Help" class="btn orange">?</a></span>
 																</div>
-																
+
 															</div>
-														</div> 
+														</div>
 														<div class="form_row added_fields prod_id_2 prod_id_3 hide">
 															<label class="field_name align_right">Primary Appt. Preference</label>
 															<div class="field">
@@ -964,9 +972,9 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																		<option value="Phone Appts">Phone Appts</option>
 																	</select>
 																</div>
-														
+
 															</div>
-														</div> 
+														</div>
 														<div class="form_row added_fields prod_id_2 prod_id_3 hide">
 															<label class="field_name align_right">Secondary Appt. Preference</label>
 															<div class="field">
@@ -978,9 +986,9 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																		<option value="Phone Appts">Phone Appts</option>
 																	</select>
 																</div>
-																
+
 															</div>
-														</div> 
+														</div>
 														<div class="form_row added_fields prod_id_2 prod_id_3 hide">
 															<label class="field_name align_right">Appt. length</label>
 															<div class="field">
@@ -993,16 +1001,16 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	</select>
 																	<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="What length of time would you like your appts set for?" title="Help" class="btn orange">?</a></span>
 																</div>
-																
+
 															</div>
-														</div>	
+														</div>
 														<div class="form_row added_fields prod_id_2 prod_id_3 hide">
 															<label class="field_name align_right">Special Details</label>
 															<div class="field">
 																<div class="span8">
 																	<textarea class="autosize" name="special_details--tosql_products_ext" cols="63" rows="3" style="resize: vertical; height: 88px;"></textarea>
 																	<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="Do you have any special details we need to be aware of?" title="Help" class="btn orange">?</a></span>
-																</div>										
+																</div>
 															</div>
 														</div>
 														<div class="form_row added_fields prod_id_2 prod_id_3 hide">
@@ -1017,7 +1025,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 																	<span class="help"><a href="#" rel="popover" data-trigger="hover" data-placement="right" data-content="In the event there is incorrect contact info for one of your clients, would you like us to send an EPRINT letter on your behalf?" title="Help" class="btn orange">?</a></span>
 																</div>
 															</div>
-														</div>			
+														</div>
 													</div>
 													<!----------------------------------------------------------------------------------------------
 													-
@@ -1080,11 +1088,11 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 															<a href="#submissionmodal" data-toggle="modal" class="btn dark_green s-button"><i class="icon-check"></i> Register for services!</a>
 														</div>
                                                     </div>
-													
-													</form>
-													
 
-                                                </div>  
+													</form>
+
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1096,8 +1104,8 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
             </div>
         </div>
     </div>
-	
-	
+
+
 <!------------------------------- Modal for submission ---------------------------------------->
 <div id="submissionmodal" class="modal hide fade submitmodal" data-backdrop="static">
     <div class="modal-header">
@@ -1115,7 +1123,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
 
     <!-- Le javascript ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	
+
     <script src="js/jquery-1.10.2.js"></script>
 	<script src="js/library/chosen.jquery.min.js"></script>
     <script src="js/jquery-ui-1.10.3.js"></script>
@@ -1147,7 +1155,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
     <script src="js/library/bootstrap-datetimepicker.js"></script>
     <script src="js/library/bootstrap-timepicker.js"></script>
     <script src="js/library/bootstrap-datepicker.js"></script>
-    <script src="js/library/bootstrap-fileupload.js"></script>	
+    <script src="js/library/bootstrap-fileupload.js"></script>
     <script src="js/library/jquery.inputmask.bundle.js"></script>
 	<script src="js/library/bootstrap-select.js"></script>
 	<script src="js/jquery.maskedinput.js"></script>
@@ -1158,20 +1166,20 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
     <script src="js/library/bootstrap-modalmanager.js"></script>
 	<script src="js/forms_layout.js"></script> <!--Amber Added -->
 	<script src="js/library/bootstrapSwitch.js"></script> <!-- slider toggle -->
-	
-	
+
+
 	<script src="js/library/jquery.reject.js"></script> <!-- Script to Disable old browsers -->
-	
+
 	<script>
 	function stafflist(e, num) {
 	$("#ffr_where_to_set_appts option[name='"+num+"']").remove();
     window["staff"+num] = e.value;
-    var eval = e.value;	
+    var eval = e.value;
 	if(eval) {
     $("#ffr_where_to_set_appts").append('<option value="'+eval+'" name="'+num+'">'+eval+'</option>')
 	}
     }; //Funtion to append staff names to staff options in select list
-	
+
 	</script>
 
   </body>

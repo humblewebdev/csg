@@ -106,7 +106,7 @@ $('.timepicker3').timepicker({
 	 });
 	
     //On website field update run internet search for user data script	
-	/*$('#website').on('focusout', function() {
+	$('#website').on('focusout', function() {
 	    var webaddress = $(this).val();
 		if(webaddress != "http://www.farmersagent.com/" && webaddress.length >=  30){
 		
@@ -125,7 +125,7 @@ $('.timepicker3').timepicker({
 		   }
 		 });
 		}
-	});*/
+	});
 	
 	//On agent_code field update run check for duplicate user with same info
 	$('#agent_code').on('input focusout', function() {

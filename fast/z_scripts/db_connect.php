@@ -1,10 +1,10 @@
 <?php
 //conection:
 
-define ("DB_HOST", "108.253.54.241"); // set database host
-define ("DB_USER", "webusr"); // set database user
-define ("DB_PASS","XD9mmSA!"); // set database password
-define ("DB_NAME","csg_fast_prod"); // set database name
+define ("DB_HOST", "localhost"); // set database host
+define ("DB_USER", "root"); // set database user
+define ("DB_PASS","root"); // set database password
+define ("DB_NAME","csg_dev_database"); // set database name
 
 date_default_timezone_set("America/Chicago");
 
@@ -31,16 +31,16 @@ Remember this code must be placed on very top of any html or php page.
 function page_protect() {
 session_start();
 
-global $db; 
+global $db;
 
 /* Secure against Session Hijacking by checking user agent */
 if (isset($_SESSION['HTTP_USER_AGENT']))
 {
     if ($_SESSION['HTTP_USER_AGENT'] != md5($_SERVER['HTTP_USER_AGENT']))
     {
-        
+
 		logout();
-		
+
         exit;
     }
 }
@@ -48,38 +48,38 @@ if (isset($_SESSION['HTTP_USER_AGENT']))
 // before we allow sessions, we need to check authentication key - ckey and ctime stored in database
 
 /* If session not set, check for cookies set by Remember me */
-if (!isset($_SESSION['user_id']) && !isset($_SESSION['user_name']) ) 
+if (!isset($_SESSION['user_id']) && !isset($_SESSION['user_name']) )
 {
 	if(isset($_COOKIE['user_id']) && isset($_COOKIE['user_key'])){
 	/* we double check cookie expiry time against stored in database */
-	
+
 	$cookie_user_id  = filter($_COOKIE['user_id']);
 	$rs_ctime = $mysqli->query("select ckey, ctime from users where users_id='$cookie_user_id'") or die($mysqli->error);
 	list($ckey,$ctime) = $rs_ctime->fetch_assoc($rs_ctime);
 	// coookie expiry
 	if( (time() - $ctime) > 60*60*24*COOKIE_TIME_OUT) {
-        
+
 		logout();
 		}
-/* Security check with untrusted cookies - dont trust value stored in cookie. 		
+/* Security check with untrusted cookies - dont trust value stored in cookie.
 /* We also do authentication check of the `ckey` stored in cookie matches that stored in database during login*/
 
 	 if( !empty($ckey) && is_numeric($_COOKIE['user_id']) && isUserID($_COOKIE['user_name']) && $_COOKIE['user_key'] == sha1($ckey)  ) {
 	 	  session_regenerate_id(); //against session fixation attacks.
-	
+
 		  $_SESSION['user_id'] = $_COOKIE['user_id'];
 		  $_SESSION['user_name'] = $_COOKIE['user_name'];
-		/* query user level from database instead of storing in cookies */	
+		/* query user level from database instead of storing in cookies */
 		  $userlevel = $mysqli->query("select user_level from users where users_id='$_SESSION[user_id]'");
 		  list($user_level) = $userlevel->fetch_assoc();
 
 		  $_SESSION['user_level'] = $user_level;
 		  $_SESSION['HTTP_USER_AGENT'] = md5($_SERVER['HTTP_USER_AGENT']);
-		  
-		  
-		  
+
+
+
 	   } else {
-	   
+
 	   logout();
 	   }
 
@@ -92,12 +92,12 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['user_name']) )
 
 function filter($data) {
 	$data = trim(htmlentities(strip_tags($data)));
-	
+
 	if (get_magic_quotes_gpc())
 		$data = stripslashes($data);
-	
+
 	//$data = $mysqli->real_escape_string($data);
-	
+
 	return $data;
 }
 
@@ -113,7 +113,7 @@ $new = ucwords(ereg_replace('_',' ',$url));
 return($new);
 }
 
-function ChopStr($str, $len) 
+function ChopStr($str, $len)
 {
     if (strlen($str) < $len)
         return $str;
@@ -123,35 +123,35 @@ function ChopStr($str, $len)
             $str = substr($str,0,$spc_pos);
 
     return $str . "...";
-}	
+}
 
 function isEmail($email){
   return preg_match('/^\S+@[\w\d.-]{2,}\.[\w]{2,6}$/iU', $email) ? TRUE : FALSE;
 }
 
-function isURL($url) 
+function isURL($url)
 {
 	if (preg_match('/^(http|https|ftp):\/\/([A-Z0-9][A-Z0-9_-]*(?:\.[A-Z0-9][A-Z0-9_-]*)+):?(\d+)?\/?/i', $url)) {
 		return true;
 	} else {
 		return false;
 	}
-} 
+}
 
 function GenPwd($length = 7)
 {
   $password = "";
   $possible = "0123456789bcdfghjkmnpqrstvwxyz"; //no vowels
-  
-  $i = 0; 
-    
-  while ($i < $length) { 
 
-    
+  $i = 0;
+
+  while ($i < $length) {
+
+
     $char = substr($possible, mt_rand(0, strlen($possible)-1), 1);
-       
-    
-    if (!strstr($password, $char)) { 
+
+
+    if (!strstr($password, $char)) {
       $password .= $char;
       $i++;
     }
@@ -165,17 +165,17 @@ function GenPwd($length = 7)
 function GenKey($length = 7)
 {
   $password = "";
-  $possible = "0123456789abcdefghijkmnopqrstuvwxyz"; 
-  
-  $i = 0; 
-    
-  while ($i < $length) { 
+  $possible = "0123456789abcdefghijkmnopqrstuvwxyz";
 
-    
+  $i = 0;
+
+  while ($i < $length) {
+
+
     $char = substr($possible, mt_rand(0, strlen($possible)-1), 1);
-       
-    
-    if (!strstr($password, $char)) { 
+
+
+    if (!strstr($password, $char)) {
       $password .= $char;
       $i++;
     }
@@ -197,10 +197,10 @@ $sess_user_id = strip_tags($mysqli->real_escape_string($_SESSION['user_id']));
 $cook_user_id = strip_tags($mysqli->real_escape_string($_COOKIE['user_id']));
 
 if(isset($sess_user_id) || isset($cook_user_id)) {
-$mysqli->query("update `users` 
-			set `ckey`= '', `ctime`= '' 
+$mysqli->query("update `users`
+			set `ckey`= '', `ctime`= ''
 			where `users_id`='$sess_user_id' OR  `users_id` = '$cook_user_id'") or die(mysqli_error($mysqli));
-}		
+}
 
 /************ Delete the sessions****************/
 unset($_SESSION['user_id']);
@@ -215,7 +215,7 @@ unset($_SESSION['mem_of']);
 unset($_SESSION['num_mems']);
 
 session_unset();
-session_destroy(); 
+session_destroy();
 
 /* Delete the cookies*******************/
 setcookie("user_id", '', time()-60*60*24*COOKIE_TIME_OUT, "/");
@@ -242,7 +242,7 @@ function checkAdmin($islogout) {
 
 if($_SESSION['user_level'] > LDAP_USER_LEVEL) {
 	return 1;
-}else{ 
+}else{
 
 if($islogout == "logout"){ logout(); }
 	return 0;
@@ -254,7 +254,7 @@ function checkFarmUser($islogout) {
 
 if($_SESSION['user_level'] == FARM_USER_LEVEL) {
 	return 1;
-} else { 
+} else {
 
 if($islogout == "logout"){ logout(); }
 	return 0;
@@ -266,7 +266,7 @@ function checkLdapUser($islogout) {
 
 if($_SESSION['user_level'] == LDAP_USER_LEVEL) {
 return 1;
-} else { 
+} else {
 
 if($islogout == "logout"){ logout(); }
 	return 0;
@@ -275,9 +275,9 @@ if($islogout == "logout"){ logout(); }
 }
 
 //Function to Get Browser Info
-function getBrowser() 
-{ 
-    $u_agent = $_SERVER['HTTP_USER_AGENT']; 
+function getBrowser()
+{
+    $u_agent = $_SERVER['HTTP_USER_AGENT'];
     $bname = 'Unknown';
     $platform = 'Unknown';
     $version= "";
@@ -292,39 +292,39 @@ function getBrowser()
     elseif (preg_match('/windows|win32/i', $u_agent)) {
         $platform = 'windows';
     }
-    
+
     // Next get the name of the useragent yes seperately and for good reason
-    if(preg_match('/MSIE/i',$u_agent) && !preg_match('/Opera/i',$u_agent)) 
-    { 
-        $bname = 'Internet Explorer'; 
-        $ub = "MSIE"; 
-    } 
-    elseif(preg_match('/Firefox/i',$u_agent)) 
-    { 
-        $bname = 'Mozilla Firefox'; 
-        $ub = "Firefox"; 
-    } 
-    elseif(preg_match('/Chrome/i',$u_agent)) 
-    { 
-        $bname = 'Google Chrome'; 
-        $ub = "Chrome"; 
-    } 
-    elseif(preg_match('/Safari/i',$u_agent)) 
-    { 
-        $bname = 'Apple Safari'; 
-        $ub = "Safari"; 
-    } 
-    elseif(preg_match('/Opera/i',$u_agent)) 
-    { 
-        $bname = 'Opera'; 
-        $ub = "Opera"; 
-    } 
-    elseif(preg_match('/Netscape/i',$u_agent)) 
-    { 
-        $bname = 'Netscape'; 
-        $ub = "Netscape"; 
-    } 
-    
+    if(preg_match('/MSIE/i',$u_agent) && !preg_match('/Opera/i',$u_agent))
+    {
+        $bname = 'Internet Explorer';
+        $ub = "MSIE";
+    }
+    elseif(preg_match('/Firefox/i',$u_agent))
+    {
+        $bname = 'Mozilla Firefox';
+        $ub = "Firefox";
+    }
+    elseif(preg_match('/Chrome/i',$u_agent))
+    {
+        $bname = 'Google Chrome';
+        $ub = "Chrome";
+    }
+    elseif(preg_match('/Safari/i',$u_agent))
+    {
+        $bname = 'Apple Safari';
+        $ub = "Safari";
+    }
+    elseif(preg_match('/Opera/i',$u_agent))
+    {
+        $bname = 'Opera';
+        $ub = "Opera";
+    }
+    elseif(preg_match('/Netscape/i',$u_agent))
+    {
+        $bname = 'Netscape';
+        $ub = "Netscape";
+    }
+
     // finally get the correct version number
     $known = array('Version', $ub, 'other');
     $pattern = '#(?<browser>' . join('|', $known) .
@@ -332,7 +332,7 @@ function getBrowser()
     if (!preg_match_all($pattern, $u_agent, $matches)) {
         // we have no matching number just continue
     }
-    
+
     // see how many we have
     $i = count($matches['browser']);
     if ($i != 1) {
@@ -348,10 +348,10 @@ function getBrowser()
     else {
         $version= $matches['version'][0];
     }
-    
+
     // check if we have a number
     if ($version==null || $version=="") {$version="?";}
-    
+
     return array(
         'userAgent' => $u_agent,
         'name'      => $bname,
@@ -363,10 +363,10 @@ function getBrowser()
 
 /**************************************************
   Bind to an Active Directory LDAP server and look
-  something up. 
+  something up.
 ***************************************************/
 function authenticate_ldap($user, $password){
-  
+
   $mysqli = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME) or die("Error " . mysqli_error($mysqli));
 
   $SearchFor=$user;               //What string do you want to find?
@@ -378,7 +378,7 @@ function authenticate_ldap($user, $password){
   $LDAPUser = $user;        //A valid Active Directory login
   $LDAPUserPassword = $password;
   $LDAPFieldsToFind = array("cn", "givenname", "samaccountname", "homedirectory", "telephonenumber", "mail", "memberof");
-   
+
   $access = 0;
   $access_admin = 0;
   $cnx = ldap_connect($LDAPHost) or die("Could not connect to LDAP");
@@ -405,15 +405,15 @@ function authenticate_ldap($user, $password){
 	$ldap_nummems = count($memof);
 	if($ldap_nummems  > 0){$ldap_nummems  = $ldap_nummems  - 1;}
 
-   if($ldap_sam != "" || $ldap_sam != NULL){ 
-   
+   if($ldap_sam != "" || $ldap_sam != NULL){
+
    /*********** Check if record has been created for this user, if not create one ************/
-    
+
 	$search_sql_user = $mysqli->query("SELECT users_id FROM users_ldap where user_un='$ldap_sam';");
     $search_row_cnt = $search_sql_user->num_rows;
-	
+
 	$searchresult = $search_sql_user->fetch_row();
-	
+
 	if($search_row_cnt < 1){
 	    $row_cnt_result = $mysqli->query('SELECT users_id FROM users_ldap ORDER BY users_id DESC LIMIT 1;');
 		/* determine the id to assign to this new user based on the latest id used in the users table +1 */
@@ -421,37 +421,37 @@ function authenticate_ldap($user, $password){
 
 		$num_of_rows = $row_cnt_result->fetch_row();
 		$this_users_id = $num_of_rows[0] + 1;  //Here is where the user id gets assigned
-		
+
 		$mysqli->query("INSERT INTO users_ldap (users_id, user_un, user_full_name, user_level) VALUES ('$this_users_id', '$ldap_sam', '$ldap_giv $ldap_sn', '3')") or die($mysqli->error);
 	} else {$this_users_id = $searchresult[0];}
-	
-   
+
+
 	/*********** End of User Creation ************/
-   
+
    session_start();
    session_regenerate_id (true); //prevent against session fixation attacks.
 
-   // this sets variables in the session 
-   $_SESSION['user_id']= $this_users_id;  
+   // this sets variables in the session
+   $_SESSION['user_id']= $this_users_id;
    $_SESSION['user_name'] = $ldap_sam;
    $_SESSION['user_level'] = '3';
    $_SESSION['HTTP_USER_AGENT'] = md5($_SERVER['HTTP_USER_AGENT']);
-	
+
    $_SESSION['cn'] = $ldap_nam;
    $_SESSION['sam'] = $ldap_sam;
    $_SESSION['giv'] = $ldap_giv;
    $_SESSION['mem_of'] = $ldap_memof;
    $_SESSION['num_mems'] = $ldap_nummems;
-   
+
    //update the timestamp and key for cookie
    $stamp = time();
    $ckey = GenKey();
-	
+
    $mysqli->query("update users_ldap set ctime='$stamp', ckey = '$ckey', last_login_timestamp=NOW() where user_un='$ldap_sam';") or die($mysqli->error);
-   
+
    //Log the successful login attempt
 	$browserinfo = getBrowser();
-	
+
 	  $logthis =
 	  $mysqli->query("INSERT INTO login_tracker
 		(
@@ -478,20 +478,20 @@ function authenticate_ldap($user, $password){
 		NOW()
 		);
 		") or die($mysqli->error);
-		
+
 	if(isset($_POST['remember'])){
 				  setcookie("user_id", $_SESSION['user_id'], time()+60*60*24*COOKIE_TIME_OUT, "/");
 				  setcookie("user_key", sha1($ckey), time()+60*60*24*COOKIE_TIME_OUT, "/");
 				  setcookie("user_name",$_SESSION['user_name'], time()+60*60*24*COOKIE_TIME_OUT, "/");
 	    }
-   $mysqli->close();  
-   
-   return true; 
-   } else { $mysqli->close(); return false; }
-   
-  }   
+   $mysqli->close();
 
-}//End of Function 
+   return true;
+   } else { $mysqli->close(); return false; }
+
+  }
+
+}//End of Function
 
 function formatPhone($phone)
 {

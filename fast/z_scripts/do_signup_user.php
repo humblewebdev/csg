@@ -136,10 +136,11 @@ $sql_insert_statement = "";
 if($querysuccess == $tablecount){  
     $submission_result = "success";
 	
-	//include 'farm_profile_pic_download.php'; //Download users profile pic to server
+	include 'farm_profile_pic_download.php'; //Download users profile pic to server
 	
 	//added registration email 12/31/2013
-	include '../email_widget/email_registration_script.php';
+	//@TODO include this to send out registration emails
+	//include '../email_widget/email_registration_script.php';
 	
 	if($debugmode == TRUE){
 	echo "$successalert Success! User has been created with no errors. $alertclose";
