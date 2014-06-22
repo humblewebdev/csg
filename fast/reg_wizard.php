@@ -250,7 +250,7 @@ $searchinfo = $mysqli->query("SELECT * FROM fast_products;") or die($mysqli->err
                                                         <div class="form_row">
                                                             <label class="field_name align_right">Referal Agent Name</label>
                                                             <div class="field">
-                                                                <input class="span6" id="referal_first" name="referal_agent_Name--tosql_users" type="text" >
+                                                                <input class="span6" id="referal_first" name="referal_agent_name--tosql_users" type="text" >
                                                                 <label for="agentcode" id="dup_agentcode"></label>
 															</div>
                                                         </div>
