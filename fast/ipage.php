@@ -33,7 +33,7 @@ if($info_firstname == NULL){
 			 
 				// Print out the contents of the entry 
 
-				Print "<img src='$info_profile_pic' align='left' style='margin: 5px; width: 89px; height: 109px; border: 3px solid #fff;'	/>";
+				Print "<img src='$info_profile_pic' align='left' style='margin: 5px; width: 89px; height: 109px; border: 3px solid #fff;'	onError='this.src='http://farmersagent.com/Images/FarmersLogo_placements.jpg'/>";
 				Print "<br><b>DO NOT GIVE OUT   </b> "; 
 				Print "</br><b>Route Back #</b> ". formatPhone($info_rback)  . ""; 
 				

@@ -2,7 +2,7 @@
 <?php
 error_reporting(0);
 include 'z_scripts/db_connect.php';
-page_protect();
+//page_protect();
 checkAdmin("logout");
 
 /**** Set all PHP Variables as $info_(fieldname) for the info of the logged in user **/
